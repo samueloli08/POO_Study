@@ -1,11 +1,9 @@
 package ufc.qxd.src;
-
 import java.util.Objects;
 
 public class Treinador {
     private String name;
-    private int x;
-    private int y;
+    private int x, y;
     private Pokemon[] pokemons;
 
     public Treinador(String name, int x, int y) {

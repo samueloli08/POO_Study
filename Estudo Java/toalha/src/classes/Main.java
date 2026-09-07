@@ -17,7 +17,8 @@ public class Main {
 
         Toalha toalha = new Toalha(color, size, 0);
 
-        while(true) {
+        boolean rodando = true;
+        while(rodando) {
             System.out.println("Escolha o que fazer com sua Toalha - Digite o Número da Ação");
             System.out.println("[1] - Usa-lá pra se Secar");
             System.out.println("[2] - Torce-lá");
@@ -43,6 +44,12 @@ public class Main {
             }
             else {
                 System.out.println("Comando Inválido");
+            }
+
+            System.out.println("SAIR - [1] NÃO | [2] SIM");
+            int saida = sc.nextInt();
+            if (saida == 2) {
+                rodando = false;
             }
         }
     }

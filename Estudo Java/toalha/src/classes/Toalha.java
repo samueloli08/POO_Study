@@ -21,6 +21,7 @@ public class Toalha {
         }
         else {
             System.out.println("Essa toalha não consegue te secar");
+            this.wetness -= amount;
         }
     }
 
@@ -29,43 +30,28 @@ public class Toalha {
     }
 
     public boolean MaxDry(int wetness) {
-        if (this.size == "P" || this.size == "p") {
-            if(wetness <= 50) {
-                return true;
-            }
-            else {
-                return false;
-            }
+        if (this.size.equals("P") || this.size.equals("p")) {
+            return wetness <= 50;
         }
-        else if (this.size == "M" || this.size == "m") {
-            if(wetness <= 75) {
-                return true;
-            }
-            else {
-                return false;
-            }
+        else if (this.size.equals("M") || this.size.equals("m")) {
+            return wetness <= 75;
         }
-        else if (this.size == "G" || this.size == "g") {
-            if(wetness <= 100) {
-                return true;
-            }
-            else {
-                return false;
-            }
+        else if (this.size.equals("G") || this.size.equals("g")) {
+            return wetness <= 100;
         }
 
         return false;
     }
 
     public void getMaxWetness() {
-        if (this.size == "P" || this.size == "p") {
+        if (this.size.equals("P") || this.size.equals("p")) {
             System.out.println("Sua toalha absorve até 50 de umidade");
         }
 
-        else if (this.size == "M" || this.size == "m") {
+        else if (this.size.equals("M") || this.size.equals("m")) {
             System.out.println("Sua toalha absorve até 75 de umidade");
         }
-        else if (this.size == "G" || this.size == "g") {
+        else if (this.size.equals("G") || this.size.equals("g")) {
             System.out.println("Sua toalha absorve até 100 de umidade");
         }
     }

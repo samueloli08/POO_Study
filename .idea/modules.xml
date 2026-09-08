@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/POO_Study.iml" filepath="$PROJECT_DIR$/.idea/POO_Study.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pokemon/Pokemon.iml" filepath="$PROJECT_DIR$/Pokemon/Pokemon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudo Java/animal/animal.iml" filepath="$PROJECT_DIR$/Estudo Java/animal/animal.iml" />
       <module fileurl="file://$PROJECT_DIR$/Estudo Java/estoque/estoque.iml" filepath="$PROJECT_DIR$/Estudo Java/estoque/estoque.iml" />
       <module fileurl="file://$PROJECT_DIR$/Estudo Java/toalha/toalha.iml" filepath="$PROJECT_DIR$/Estudo Java/toalha/toalha.iml" />
       <module fileurl="file://$PROJECT_DIR$/Estudo Java/triangulos/triangulos.iml" filepath="$PROJECT_DIR$/Estudo Java/triangulos/triangulos.iml" />

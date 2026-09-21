@@ -16,19 +16,30 @@ public class Treinador {
     public String getName() {
         return this.name;
     }
+    public int getX() {
+        return this.x;
+    }
+    public int getY() {
+        return this.y;
+    }
 
-    public void Mover(String direction) {
-        if (Objects.equals(direction, "North")) {
-            this.y++;
-        }
-        else if (Objects.equals(direction, "South")) {
+    public void setPosition (int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void mover(String direction) {
+        if (Objects.equals(direction, "Cima")) {
             this.y--;
         }
-        else if (Objects.equals(direction, "West")) {
-            this.x++;
+        else if (Objects.equals(direction, "Baixo")) {
+            this.y++;
         }
-        else if (Objects.equals(direction, "East")) {
+        else if (Objects.equals(direction, "Esquerda")) {
             this.x--;
+        }
+        else if (Objects.equals(direction, "Direita")) {
+            this.x++;
         }
     }
 
@@ -45,7 +56,7 @@ public class Treinador {
         }
     }
 
-    public boolean Capturar (Pokemon pokemon) {
+    public boolean capturar (Pokemon pokemon) {
         for (int i = 0; i < this.pokemons.length; i++) {
             if (this.pokemons[i] == null) {
                 this.pokemons[i] = pokemon;

@@ -15,15 +15,13 @@ public class Jogo {
     public void iniciar() {
         while (true) {
             mapa.exibirMapa(treinador);
-
             System.out.println("Digite Direção");
-
 
             int xPreMove = treinador.getX();
             int yPreMove = treinador.getY();
 
             treinador.mover(sc.nextLine());
-            if (!mapa.posiçãoValida(treinador.getX(), treinador.getY())) {
+            if (!mapa.posicaoValida(treinador.getX(), treinador.getY())) {
                 System.out.println("Movimento Inválido");
                 treinador.setPosition(xPreMove, yPreMove);
             }

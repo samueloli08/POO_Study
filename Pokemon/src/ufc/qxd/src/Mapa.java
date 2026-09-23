@@ -1,5 +1,7 @@
 package ufc.qxd.src;
 
+import java.util.Random;
+
 public class Mapa {
     String[][] layout;
     private final int largura;
@@ -13,9 +15,15 @@ public class Mapa {
     }
 
     private void inicializarMapa (int altura, int largura) {
+        Random random = new Random();
         for(int i = 0; i < largura; i++) {
             for(int j = 0; j < altura; j++) {
-                this.layout[i][j] = "# ";
+                if (random.nextDouble() <= 0.20) {
+                this.layout[i][j] = "W ";
+                }
+                else {
+                    this.layout[i][j] = "  ";
+                }
             }
         }
     }
@@ -34,7 +42,7 @@ public class Mapa {
         }
     }
 
-    public boolean posiçãoValida(int x, int y) {
-        return x >= 0 && x <= largura && y >= 0 && y <= altura;
+    public boolean posicaoValida(int x, int y) {
+        return x >= 0 && x < largura && y >= 0 && y < altura;
     }
 }
